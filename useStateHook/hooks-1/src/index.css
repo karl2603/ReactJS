@@ -1,0 +1,30 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body{
+  background-color: antiquewhite;
+  color: black;
+}
+.container{
+  margin-top: 100px;
+  padding: 50px 30px;
+  text-align: center;
+}
+.container h1{
+  margin: 10px;
+  font: 25px;
+}
+.container button{
+  padding: 15px 20px;
+  border-radius: 12px;
+  font-size: 15px;
+  box-shadow: rgb(rgb(69, 68, 68), rgb(74, 78, 74), blue);
+  margin-right: 10px;
+  cursor: pointer;
+  border: 1px solid;
+}
+.container button:active{
+  transform: scale(0.98);
+}
