@@ -1,6 +1,6 @@
 import React from "react";
 import { useState , useEffect , useRef  } from "react";
-import "./App.css"
+import "./ConRendering.css"
 
 function Rendering(){
     const [name,setname] = useState(null)

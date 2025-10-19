@@ -4,5 +4,5 @@ import './index.css'
 import {Rendering} from './ConRendering.jsx'
 
 createRoot(document.getElementById('root')).render(
-  <Rendering />
+  // <Rendering />
 )
