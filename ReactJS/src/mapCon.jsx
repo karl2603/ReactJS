@@ -39,7 +39,18 @@ usebutton("fail")
 <button className="pass" onClick={passStudents}>Pass</button>
 <button className="fail" onClick={failStudents}>Fail</button>
             </div>
-        </div>
+            <div className="studentList">
+                {
+                    students.map( (student)=>{
+                        if(student.marks>24){
+                            return(
+                                <h1 className="passed"></h1>
+                            )
+                        }
+ } )
+                }
+            </div>
+            </div>
     )
 }
 
