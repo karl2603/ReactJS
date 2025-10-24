@@ -52,3 +52,39 @@ background-color: #EF4444;
 background-color: #DC2626;
 }
 
+.displayContainer{
+    margin: 30px 150px;
+    padding: 10px;
+}
+
+.StudentContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 35px;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.StudentContainer:hover{
+    cursor: pointer;
+    transform: translateY(-6px);
+}
+
+.name {
+    text-align: left;
+    width: 100%;
+}
+
+.marks {
+    text-align: center;
+    width: 100%;
+}
+
+h3:last-child {
+    text-align: right;
+    width: 100%;
+}

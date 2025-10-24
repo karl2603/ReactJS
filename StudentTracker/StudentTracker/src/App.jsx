@@ -13,12 +13,13 @@ function App() {
         { name: "Hariharan", marks: 20 },
         { name: "Vignesh", marks: 22 },
         { name: "Karl", marks: 42 },
-        { name: "Roshan", marks: 30 },
+        { name: "Roshan", marks: 21 },
         { name: "Rupashree", marks: 46 },
-        { name: "Vishwha", marks: 35 }
+        { name: "Vishwha", marks: 20 }
     ]
 
     let displayStudents;
+
     const [filter, setFilter] = useState("All")
 
     function allStudents() {
@@ -52,7 +53,15 @@ function App() {
                 <button className="btn failbtn" onClick={failedStudents}>Failed</button>
             </div>
             <div className="displayContainer">
-
+            {
+                displayStudents.map( (student) => (
+                    <div className="StudentContainer" style={{backgroundColor : student.marks>=25 ? "#D1FAE5" : "#FEE2E2"}}>
+                        <h3 className="name">{student.name}</h3>
+                        <h3 className="marks"> Marks : {student.marks}/50</h3>
+                    {student.marks >=25 ? (<h3 className="passText">Pass</h3>) : (<h3 className="failText">Fail</h3>)}
+                    </div>
+                ) )
+            }
             </div>
         </div>
     )
