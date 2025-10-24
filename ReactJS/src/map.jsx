@@ -4,15 +4,15 @@ import "./map.css";
 
 function Map() {
     const profile = [
-        { name: "Karl", age: "19", job: "Web Developer" },
-        { name: "Hasini", age: "17", job: "Speaker" },
+        { name: "Karl", age: "19", job: "Team Lead" },
+        { name: "Roshan", age: "18", job: "Frontend Developer" },
+        {name: "Rupashree", age: "20", job: "Backend Developer" },
         { name: "Vilasni", age: "20", job: "Designer" },
-        { name: "Vignesh", age: "18", job: "Editor" },
-        { name: "Roshan", age: "20", job: "Support Dev" }
+        { name: "Vignesh", age: "18", job: "Support Dev" }
     ]
     return (
         <div className="container">
-            <h1 className="companyName">Karl & Co</h1>
+            <h1 className="companyName">--Karl & Associates--</h1>
             {
                profile.map( (profileCard) => (
                <div className="profileContainer">
