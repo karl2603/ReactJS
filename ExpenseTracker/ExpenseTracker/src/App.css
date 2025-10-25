@@ -57,7 +57,7 @@
   display: flex;
   background-color: #FFFFFF;
   padding: 30px 40px;
-  margin: 10px 70px;
+  margin: 10px 70px 20px 70px;
   border-radius: 20px;
   gap: 20px;
   box-shadow: 00 8px 25px rgba(0, 0, 0, 0.05)
