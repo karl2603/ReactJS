@@ -21,7 +21,7 @@
 
 .brandName{
   font-family: 'Poppins', sans-serif;
-  margin-left: 15px;
+  margin-left: 10px;
   letter-spacing: 1.8px;
   font-weight: 600;
   color: #2A8444;
@@ -37,6 +37,7 @@
 .totalExpenseContainer:hover{
   cursor:pointer;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+  transform: translateY(-2px);
 }
 
 .totalExpenseText{
@@ -128,4 +129,45 @@
 
 .addBtn:active{
   transform: scale(0.98);
+}
+
+.filterContainer{
+  display: flex;
+  gap: 15px;
+  margin: 30px 70px;
+}
+
+.filterbtn{
+  background-color: #FFFFFF;
+  padding: 12px 16px;
+  border-radius: 12px;
+  border: 1px solid #E0E0E0;
+  font-size: 17px;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+}
+
+.filterbtn:hover{
+  transform: translateY(-2px);
+  box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.06);
+}
+
+.filterbtn:active{
+  transform: scale(0.98);
+}
+
+.allbtn{
+  background-color: #6C63FF;
+  color: #FFFFFF;
+  box-shadow: 0 5px 15px rgba(108, 99, 255, 0.4);
+}
+
+.allbtn:hover{
+  background-color: #5A54D9 ;
+  box-shadow: 0 7px 18px rgba(108, 99, 255, 0.5);
+}
+
+.categorySelect{
+  color: #6B7280;
 }

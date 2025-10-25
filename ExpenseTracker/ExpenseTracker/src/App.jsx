@@ -7,7 +7,7 @@ function ExpenseTrackerApp(){
     <div className="container">
       <div className="header">
         <div className="brand">
-          <img src="/Images/QuickTrackLogo2.png" alt="Logo" width="80px" height="60px"></img>
+          <img src="/Images/QuickTrackLogo2.png" alt="Logo" width="60px" height="60px"></img>
           <h1 className="brandName">QuickTrack</h1>
         </div>
         <div className="totalExpenseContainer">
@@ -26,19 +26,24 @@ function ExpenseTrackerApp(){
         </div>
         <div className="inputDiv categoryDiv">
           <span className="inputHeader category">Category</span>
-          <select className="select input catergoryinput">
-            <option value="Food">Food</option>
-            <option value="Travel">Travel</option>
-            <option value="Bills">Bills</option>
-            <option value="Others">Others</option>
-          </select>
+         <select className="select input catergoryinput" required>
+  <option value="" disabled selected className="categorySelect">Select a category...</option>
+  <option value="Food">Food</option>
+  <option value="Transportation">Transportation</option>
+  <option value="Bills">Bills</option>
+  <option value="Shopping">Shopping</option>
+  <option value="Entertainment">Entertainment</option>
+  <option value="Health">Health</option>
+  <option value="Travel">Travel</option>
+  <option value="Others">Others</option>
+</select>
         </div>
         <div className="btnDiv inputDiv">
           <button className="addBtn">Add Expense</button>
         </div>
       </div>
       <div className="filterContainer">
-        <button className="filterbtn ">All</button>
+        <button className="filterbtn allbtn">All</button>
         <button className="filterbtn ">Food</button>
         <button className="filterbtn ">Travel</button>
         <button className="filterbtn ">Bills</button>
