@@ -5,6 +5,7 @@
   margin: 0;
   box-sizing: border-box;
   background-color: #F9F8FD;
+  font-family: 'Poppins', sans-serif;
 }
 
 .header{
@@ -20,7 +21,7 @@
 
 .brandName{
   font-family: 'Poppins', sans-serif;
-  margin-left: 10px;
+  margin-left: 15px;
   letter-spacing: 1.8px;
   font-weight: 600;
   color: #2A8444;
@@ -28,15 +29,103 @@
 
 .totalExpenseContainer{
   background-color: #FFFFFF;
-  padding: 20px 30px 25px 30px;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px -2px rgba(0, 0, 0, 0.04);
+  padding: 20px 30px;
+  border-radius: 16px;
+  box-shadow: 00 8px 25px rgba(0, 0, 0, 0.05);
+}
+
+.totalExpenseContainer:hover{
+  cursor:pointer;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
 }
 
 .totalExpenseText{
+  text-align: center;
   color: #6B7280;
   font-weight: 500;
-  letter-spacing: 1px;
+  letter-spacing: 1.6px;
   text-transform: uppercase;
-  font-size: 16px;
+  font-size: 15px;
+}
+
+.totalExpense{
+  color: #2ECC71;
+  font-weight: 600;
+}
+
+.inputContainer{
+  display: flex;
+  background-color: #FFFFFF;
+  padding: 30px 40px;
+  margin: 10px 70px;
+  border-radius: 20px;
+  gap: 20px;
+  box-shadow: 00 8px 25px rgba(0, 0, 0, 0.05)
+}
+
+.inputContainer:hover{
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+}
+
+.inputDiv{
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.inputDiv:first-child{
+  flex: 2;
+}
+
+.inputHeader{
+  color: #6B7280;
+  margin-bottom: 5px;
+}
+
+.input{
+  padding: 12px;
+  border: none;
+  background-color: #F3F4F6;
+  border-radius: 12px;
+  color: #2C3E50;
+  box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.06);
+}
+
+.input::placeholder{
+  color: #6B7280;
+}
+
+.input:focus {
+  border-color: #4f46e5;
+  box-shadow: 0 0 0 2px rgba(79, 70, 229, 0.3);
+}
+
+.btnDiv{
+  display: flex;
+  flex-direction: column;
+  align-self: flex-end;
+  padding-bottom: 5px;
+}
+
+.addBtn{
+  background-color: #2ECC71;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  padding: 12px 24px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(46, 204, 113, 0.4);
+}
+
+.addBtn:hover{
+  background-color: #27AE60;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(46, 204, 113, 0.5);
+}
+
+.addBtn:active{
+  transform: scale(0.98);
 }

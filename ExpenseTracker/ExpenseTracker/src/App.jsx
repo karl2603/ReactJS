@@ -26,14 +26,14 @@ function ExpenseTrackerApp(){
         </div>
         <div className="inputDiv categoryDiv">
           <span className="inputHeader category">Category</span>
-          <select className="select catergoryinput">
+          <select className="select input catergoryinput">
             <option value="Food">Food</option>
             <option value="Travel">Travel</option>
             <option value="Bills">Bills</option>
             <option value="Others">Others</option>
           </select>
         </div>
-        <div className="btnDiv">
+        <div className="btnDiv inputDiv">
           <button className="addBtn">Add Expense</button>
         </div>
       </div>
