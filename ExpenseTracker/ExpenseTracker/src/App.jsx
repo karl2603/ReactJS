@@ -12,7 +12,7 @@ function ExpenseTrackerApp(){
         </div>
         <div className="totalExpenseContainer">
           <h3 className="totalExpenseText">Total Expenses</h3>
-          <h1 className="totalExpense">₹1,250.75</h1>
+          <h1 className="totalExpense">₹ 0.00</h1>
         </div>
       </div>
       <div className="inputContainer">
@@ -45,8 +45,12 @@ function ExpenseTrackerApp(){
       <div className="filterContainer">
         <button className="filterbtn allbtn">All</button>
         <button className="filterbtn ">Food</button>
-        <button className="filterbtn ">Travel</button>
+        <button className="filterbtn ">Transportation</button>
         <button className="filterbtn ">Bills</button>
+        <button className="filterbtn ">Shopping</button>
+        <button className="filterbtn ">Entertainment</button>
+        <button className="filterbtn ">Health</button>
+        <button className="filterbtn ">Travel</button>
         <button className="filterbtn ">Other</button>
       </div>
     </div>
