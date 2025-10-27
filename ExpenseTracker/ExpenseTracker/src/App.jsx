@@ -8,6 +8,7 @@ function ExpenseTrackerApp() {
   const [amount, setAmount] = useState("");
   const [category, setCategory] = useState("");
   const [expenses, setExpenses] = useState([])
+  const [filter,setFilter] = useState("All")
   //onchange functions
   function inputName(event) {
     setName(event.target.value)
@@ -21,7 +22,7 @@ function ExpenseTrackerApp() {
   function inputCategory(event) {
     setCategory(event.target.value)
   }
-
+//total amount
   const total = expenses.reduce((acc, expense) => acc + expense.amount, 0);
 
 
@@ -40,6 +41,12 @@ function ExpenseTrackerApp() {
     setCategory("")
   }
 
+  //Filter Buttons
+  function filterBtn(event){
+    setFilter(event.target.value)
+  }
+
+  
  
   return (
     <div className="container">
@@ -81,18 +88,18 @@ function ExpenseTrackerApp() {
         </div>
       </div>
       <div className="filterContainer">
-        <button className="filterbtn allbtn">All</button>
-        <button className="filterbtn ">Food</button>
-        <button className="filterbtn ">Transportation</button>
-        <button className="filterbtn ">Bills</button>
-        <button className="filterbtn ">Shopping</button>
-        <button className="filterbtn ">Entertainment</button>
-        <button className="filterbtn ">Health</button>
-        <button className="filterbtn ">Travel</button>
-        <button className="filterbtn ">Other</button>
+        <button className="filterbtn allbtn" onClick={filterBtn} value="All">All</button>
+        <button className="filterbtn " onClick={filterBtn} value="Food">Food</button>
+        <button className="filterbtn " onClick={filterBtn} value="Transportation">Transportation</button>
+        <button className="filterbtn " onClick={filterBtn} value="Bills">Bills</button>
+        <button className="filterbtn " onClick={filterBtn} value="Shopping">Shopping</button>
+        <button className="filterbtn " onClick={filterBtn} value="Entertainment">Entertainment</button>
+        <button className="filterbtn " onClick={filterBtn} value="Health">Health</button>
+        <button className="filterbtn " onClick={filterBtn} value="Travel">Travel</button>
+        <button className="filterbtn " onClick={filterBtn} value="Other">Other</button>
       </div>
       <div className="displayExpenseContainer">
-        {expenses.map((expenses) => (
+        {expenses.filter( (expenses) => filter === "All" || expenses.category == filter ).map((expenses) => (
           <div className="ExpenseContainer">
             <div className="nameIcon">
               <h3 className="Name">{expenses.name}</h3>
