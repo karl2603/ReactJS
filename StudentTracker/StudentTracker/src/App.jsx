@@ -5,8 +5,9 @@ import Header from "./header.jsx";
 
 
 function App() {
+//array
     let displayStudents;
-
+//useStates
     const [students,setStudents] = useState([
         { name: "Manikam", marks: 38 },
         { name: "Vilasni", marks: 40 },
@@ -19,10 +20,12 @@ function App() {
         { name: "Rupashree", marks: 46 },
         { name: "Vishwha", marks: 20 }
     ])
+//Filter
     const [filter, setFilter] = useState("All")
+//User Input
     const [name,setName] = useState("")
     const [mark,setMark] = useState("")
-
+//filter functions
     function allStudents() {
         setFilter("All")
     }
@@ -34,7 +37,7 @@ function App() {
     function failedStudents() {
         setFilter("Fail")
     }
-
+//userInput
     function addName(event){
         setName(event.target.value)
     }
@@ -42,7 +45,7 @@ function App() {
     function addMark(event){
         setMark(event.target.value)
     }
-
+//addUserInput
     function addStudents() {
       let newStudent = {
         id : Date.now(),
