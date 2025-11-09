@@ -1,9 +1,13 @@
 import React from 'react'
+import { useState , useEffect , useCallback , useMemo } from 'react';
+import "./App.css";
+import { Header } from "./components/Header.jsx"
+import { DisplayContainer } from './components/Display.jsx';
 
-function UseCallBack() {
+function App() {
   return (
-    <div>UseCallBack</div>
+    <Header />
   )
 }
 
-export default UseCallBack
+export default App;
