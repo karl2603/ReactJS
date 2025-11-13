@@ -1,0 +1,36 @@
+.navbar {
+  display: flex;
+  gap: 1.25rem;
+  padding: 0.75rem 1.5rem;
+  background: #0d1117;
+  border-bottom: 1px solid #30363d;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #e6edf3;
+  font-weight: 500;
+  padding: 0.4rem 0.75rem;
+  border-radius: 6px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.navbar a:hover {
+  background: #1f6feb;
+  color: #ffffff;
+}
+
+.navbar a:active {
+  transform: scale(.95);
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+  .navbar a {
+    flex: 1 1 45%;
+    text-align: center;
+  }
+}
