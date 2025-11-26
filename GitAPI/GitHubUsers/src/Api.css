@@ -1,0 +1,100 @@
+/* Base Styles */
+body {
+  background-color: #0d1117;
+  color: #c9d1d9;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  margin: 0;
+}
+
+/* Grid Layout - Apply this class to the parent div wrapping <GitUsers /> */
+.users-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 40px;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+/* Loading Screen */
+.loading {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0d1117;
+}
+
+.text {
+  font-size: 24px;
+  font-weight: 600;
+  color: #c9d1d9;
+  animation: pulse 1.5s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 1; }
+}
+
+/* User Card */
+.profileCard {
+  background-color: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 6px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.2s ease-in-out;
+}
+
+.profileCard:hover {
+  border-color: #8b949e;
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.profileImg {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 2px solid #30363d;
+  margin-bottom: 16px;
+  background-color: #0d1117;
+}
+
+.profileName {
+  font-size: 20px;
+  font-weight: 600;
+  color: #c9d1d9;
+  margin: 0 0 20px 0;
+}
+
+/* Button Styles */
+.viewBtn {
+  width: 100%;
+  background-color: #21262d;
+  border: 1px solid #30363d;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.viewBtn:hover {
+  background-color: #30363d;
+  border-color: #8b949e;
+}
+
+.viewBtn a {
+  display: block;
+  padding: 8px 16px;
+  color: #58a6ff;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.viewBtn:hover a {
+  color: #ffffff;
+}
