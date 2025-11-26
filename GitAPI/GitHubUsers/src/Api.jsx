@@ -21,7 +21,7 @@ function GitUsers() {
     useEffect( ()=> {
        setTimeout( ()=> {
         fetchUsers()
-       },5000 )
+       },3000 )
     }, [] )
 
 
