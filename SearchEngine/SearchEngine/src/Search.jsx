@@ -1,19 +1,33 @@
 import React from 'react'
 import { useState } from 'react';
+import { Employees } from './dataset';
 
 function Search() {
-    const [list,setList] = useState(["Karl","Hasini","Arjun","Aanya","Vikram","Sneha","Rahul","Priya","Rohan","Ananya",
-"Amit","Kavya","Suresh","Meera","Kiran","Divya","Manoj","Pooja","Nikhil","Ishita",
-"Varun","Neha","Sanjay","Ritu","Aditya","Shreya","Deepak","Mitali","Rakesh","Nandini",
-"Sachin","Tanya","Prakash","Simran","Gaurav","Pallavi","Ajay","Isha","Ravi","Komal",
-"Harsh","Aditi","Yash","Tanvi","Mohit","Riya","Ankit","Payal","Sunil","Preeti",
-"Karthik","Sowmya","Akash","Lavanya","Vivek","Geetha","Surya","Keerthana","Ashwin","Bhavya",
-"Abhishek","Pavithra","Naveen","Sangeetha","Pranav","Swathi","Lokesh","Harini","Madhan","Monika",
-"Senthil","Revathi","Vijay","Anu","Bharath","Deepika","Sathish","Janani","Saravanan","Reshma",
-"Aravind","Shalini","Dinesh","Chitra","Ganesh","Mahalakshmi","Sriram","Vaishnavi","Balaji","Yamuna"])
+  const [search, setSearch] = useState('')
+  const [list, setList] = useState(Employees)
+  const [filteredList, setFilteredList] = useState(list)
+
+  function handleSearch(e) {
+    const value = e.target.value
+    setSearch(value)
+    const filtered = list.filter( (item) =>
+    item.toLowerCase().includes(value.toLowerCase()) )
+    setFilteredList(filtered)
+  }
   return (
-     <div className='Container'>
-      <h1 className='Header'>Karl Goodman & Associates</h1>
+    <div className='Container'>
+      <div className='headerDiv'>
+        <h1 className='Header'>Karl Goodman & Associates</h1>
+        <h3 className='subHeader'>Search Employees</h3>
+        <input className='searchInput' type='text' placeholder='Enter Name...' value={search} onChange={handleSearch}></input>
+      </div>
+      {
+        filteredList.map( (item) => (
+          <div className='filteredList'>
+            <p className='filteredEmployees'>{item}</p>
+          </div>
+        ) )
+      }
     </div>
   )
 }
