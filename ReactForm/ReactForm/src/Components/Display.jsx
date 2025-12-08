@@ -20,15 +20,15 @@ function Display({ jobCard, setJobcard }) {
     return (
         <div className='displayContainer'>
             <div className='filterContainer'>
-            <button className='filterBtn'>All</button>
-            <button className='filterBtn'>Jawa Classic</button>
-            <button className='filterBtn'>Jawa 42</button>
-            <button className='filterBtn'>Jawa Perak</button>
-            <button className='filterBtn'>Jawa Bobber</button>
-            <button className='filterBtn'>Yezdi Roadster</button>
-            <button className='filterBtn'>Yezdi Scrambler</button>
-            <button className='filterBtn'>Yezdi Adventure</button>
-            <button className='filterBtn'>BSA Goldstar</button>
+            <button className='filterBtn' onClick={()=>{setSelectedVehicle("All")}}>All</button>
+            <button className='filterBtn' onClick={()=>{setSelectedVehicle("Jawa Classic")}}>Jawa Classic</button>
+            <button className='filterBtn' onClick={()=>{setSelectedVehicle("Jawa 42")}}>Jawa 42</button>
+            <button className='filterBtn' onClick={()=>{setSelectedVehicle("Jawa Perak")}}>Jawa Perak</button>
+            <button className='filterBtn' onClick={()=>{setSelectedVehicle("Jawa Bobber")}}>Jawa Bobber</button>
+            <button className='filterBtn' onClick={()=>{setSelectedVehicle("Yezdi Roadster")}}>Yezdi Roadster</button>
+            <button className='filterBtn' onClick={()=>{setSelectedVehicle("Yezdi Scrambler")}}>Yezdi Scrambler</button>
+            <button className='filterBtn' onClick={()=>{setSelectedVehicle("Yezdi Adventure")}}>Yezdi Adventure</button>
+            <button className='filterBtn' onClick={()=>{setSelectedVehicle("BSA Goldstar")}}>BSA Goldstar</button>
             </div>
 
             {
