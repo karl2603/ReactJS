@@ -22,6 +22,10 @@ function Form({handleAdd}) {
   function handleSubmit(e) {
     e.preventDefault();
     console.log(form);
+    if(!form.name || !form.jobCardNo || !form.phoneNo || !form.vehicle || !form.desc){
+      alert("Please fill all the fields!");
+      return;
+    }
     handleAdd(form);
     setForm({
     name: "",
@@ -42,7 +46,17 @@ function Form({handleAdd}) {
         <label htmlFor='phoneNo'>Phone Number</label>
         <input className='InputPhoneNo' type='number' placeholder='Enter Phone Number...' name='phoneNo' value={form.phoneNo} onChange={handleChange} />
         <label htmlFor='vehicle'>Vehicle</label>
-        <input className='InputVehicle' type='text' placeholder='Enter Vehicle...' name='vehicle' value={form.vehicle} onChange={handleChange} />
+        <select name ="vehicle" value={form.vehicle} onChange={handleChange} className='SelectVehicle'>
+          <option value="" disabled>Select Vehicle...</option>
+          <option>Jawa Classic</option>
+          <option>Jawa 42</option>
+          <option>Jawa Perak</option>
+          <option>Jawa Bobber</option>
+          <option>Yezdi Roadster</option>
+          <option>Yezdi Scrambler</option>
+          <option>Yezdi Adventure</option>
+          <option>BSA Goldstar</option>
+        </select>
         <label htmlFor='desc'>Description</label>
         <input className='InputDesc' type='text' placeholder='Enter Description...' name='desc' value={form.desc} onChange={handleChange} />
         <button className='addBtn' type='submit'>Add JobCard</button>
