@@ -27,7 +27,7 @@ function Navbar() {
           <li>
             <Link to="/task/:id" className="nav-item">
               <span>Task Details</span>
-            </Link>
+            </Link>x1
           </li>
         </ul>
 
