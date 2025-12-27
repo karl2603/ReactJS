@@ -20,6 +20,7 @@ function App() {
       />} />
       <Route path='/task/:id' element={<TaskDetails 
       tasks={tasks}
+      setTasks={setTasks}
       />} />
     </Routes>
     </BrowserRouter>

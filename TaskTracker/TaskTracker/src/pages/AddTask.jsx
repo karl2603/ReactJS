@@ -1,8 +1,21 @@
-import React from 'react'
+import React, { useState } from 'react'
+import Navbar from "../Components/Navbar.jsx";
 
-function AddTask() {
+function AddTask({tasks, setTasks}) {
+  const [task, setTask] = useState({
+    id : Date.now(),
+    title : "",
+    date : "",
+    deadline : "",
+    description : "",
+    priority : "",
+    completed : false
+  })
   return (
+    <>
+    <Navbar />
     <div>AddTask</div>
+    </>
   )
 }
 
